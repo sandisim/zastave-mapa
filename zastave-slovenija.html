@@ -470,21 +470,32 @@ function getSunScore(lat, lng) {
 }
 
 function getRegionName(lat, lng) {
-  if (lat < 45.62 && lng < 13.75) return "Koprsko obalno območje";
-  if (lat < 45.72 && lng < 14.0)  return "Primorska – obala";
-  if (lat > 45.6 && lat < 45.88 && lng > 13.75 && lng < 14.25) return "Kraška planota";
-  if (lat > 45.82 && lat < 46.05 && lng > 13.7 && lng < 14.15) return "Vipavska dolina";
-  if (lat > 46.2 && lat < 46.55 && lng > 13.35 && lng < 13.92) return "Soška dolina / Bovec";
-  if (lat > 46.3 && lat < 46.6 && lng < 14.05) return "Triglavsko območje";
-  if (lat > 46.3 && lat < 46.65 && lng > 14.0 && lng < 14.7) return "Gorenjska";
-  if (lat > 45.9 && lat < 46.15 && lng > 14.3 && lng < 14.65) return "Ljubljanska kotlina";
-  if (lat > 45.7 && lat < 46.1 && lng > 14.1 && lng < 14.8) return "Notranjska";
-  if (lat > 46.0 && lat < 46.5 && lng > 14.7 && lng < 15.35) return "Savinjska dolina";
-  if (lat > 46.0 && lng > 15.35 && lng < 16.1) return "Vzhodna Štajerska";
-  if (lng > 16.1) return "Prekmurje";
-  if (lat < 45.85 && lng > 14.6 && lng < 15.6) return "Dolenjska";
-  if (lat < 45.7 && lng > 15.3) return "Bela krajina";
-  return "Osrednja Slovenija";
+  // Obalno-kraška
+  if (lat < 45.72 && lng < 14.1) return "Obalno-kraška";
+  // Goriška (zahod – Soška dolina, Nova Gorica)
+  if (lat > 45.72 && lat < 46.55 && lng < 13.95) return "Goriška";
+  // Gorenjska
+  if (lat > 46.15 && lat < 46.65 && lng > 13.9 && lng < 14.7) return "Gorenjska";
+  // Zasavska (majhna, centralno)
+  if (lat > 46.0 && lat < 46.2 && lng > 14.85 && lng < 15.15) return "Zasavska";
+  // Koroška
+  if (lat > 46.4 && lat < 46.75 && lng > 14.7 && lng < 15.2) return "Koroška";
+  // Savinjska
+  if (lat > 46.0 && lat < 46.55 && lng > 15.1 && lng < 15.6) return "Savinjska";
+  // Posavska
+  if (lat > 45.8 && lat < 46.1 && lng > 15.2 && lng < 15.65) return "Posavska";
+  // Podravska (Maribor območje)
+  if (lat > 46.3 && lat < 46.75 && lng > 15.5 && lng < 16.15) return "Podravska";
+  // Pomurska (skrajni severovzhod)
+  if (lat > 46.5 && lng > 16.0) return "Pomurska";
+  if (lat > 46.3 && lng > 16.1) return "Pomurska";
+  // Osrednjeslovenska (Ljubljana in okolica)
+  if (lat > 45.85 && lat < 46.25 && lng > 14.1 && lng < 15.0) return "Osrednjeslovenska";
+  // Primorsko-notranjska
+  if (lat > 45.5 && lat < 45.9 && lng > 13.9 && lng < 14.65) return "Primorsko-notranjska";
+  // Jugovzhodna Slovenija (Dolenjska, Bela krajina, Kočevje)
+  if (lat < 45.9 && lng > 14.5) return "Jugovzhodna Slovenija";
+  return "Osrednjeslovenska";
 }
 
 function scoreColor(s) {
