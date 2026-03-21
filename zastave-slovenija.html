@@ -442,7 +442,7 @@ function getWindScore(lat, lng) {
   if (lat > 45.9 && lat < 46.15 && lng > 14.3 && lng < 14.65) return { score: 30, label: "1–2 m/s", desc: "Ljubljanska kotlina – nizka hitrost vetra" };
   if (lat > 45.7 && lat < 46.1 && lng > 14.1 && lng < 14.8) return { score: 35, label: "1–2 m/s", desc: "Notranjska – nizka hitrost vetra" };
   if (lat < 45.85 && lng > 14.6 && lng < 15.5) return { score: 40, label: "1–2 m/s", desc: "Dolenjska – nizka hitrost vetra" };
-  return { score: 44, label: "1–2 m/s", desc: "Zmerna izpostavljenost vetru" };
+  return { score: 44, label: "1–2 m/s", desc: "Nizka izpostavljenost vetru" };
 }
 
 function getRainScore(lat, lng) {
