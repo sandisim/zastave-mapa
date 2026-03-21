@@ -342,9 +342,9 @@
     <div class="subtitle">Izpostavljenost vremenskim vplivom – kliknite kjerkoli na zemljevidu</div>
   </div>
   <div class="weights">
-    <div class="weight-pill"><div class="dot dot-wind"></div> Veter <span>70 %</span></div>
-    <div class="weight-pill"><div class="dot dot-rain"></div> Padavine <span>15 %</span></div>
-    <div class="weight-pill"><div class="dot dot-sun"></div> Sonce <span>15 %</span></div>
+    <div class="weight-pill"><div class="dot dot-wind"></div> Veter <span>65 %</span></div>
+    <div class="weight-pill"><div class="dot dot-rain"></div> Padavine <span>10 %</span></div>
+    <div class="weight-pill"><div class="dot dot-sun"></div> Sonce <span>25 %</span></div>
   </div>
 </header>
 
@@ -549,7 +549,7 @@ map.on('click', function(e) {
   const wind  = getWindScore(lat, lng);
   const rain  = getRainScore(lat, lng);
   const sun   = getSunScore(lat, lng);
-  const total = Math.round(wind.score * 0.70 + rain.score * 0.15 + sun.score * 0.15);
+  const total = Math.round(wind.score * 0.65 + rain.score * 0.10 + sun.score * 0.25);
   const color = scoreColor(total);
   const region = getRegionName(lat, lng);
 
