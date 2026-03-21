@@ -415,9 +415,9 @@
       <div class="legend">
         <div class="legend-title">Lestvica indeksa</div>
         <div class="legend-items">
-          <div class="legend-item"><div class="legend-dot ld-low"></div>0–45 Nizka</div>
-          <div class="legend-item"><div class="legend-dot ld-med"></div>46–60 Srednja</div>
-          <div class="legend-item"><div class="legend-dot ld-high"></div>61–75 Visoka</div>
+          <div class="legend-item"><div class="legend-dot ld-low"></div>0–50 Nizka</div>
+          <div class="legend-item"><div class="legend-dot ld-med"></div>51–65 Srednja</div>
+          <div class="legend-item"><div class="legend-dot ld-high"></div>66–75 Visoka</div>
           <div class="legend-item"><div class="legend-dot ld-vhigh"></div>76–100 Zelo visoka</div>
         </div>
       </div>
@@ -488,24 +488,24 @@ function getRegionName(lat, lng) {
 }
 
 function scoreColor(s) {
-  if (s <= 45) return '#2a9d8f';
-  if (s <= 60) return '#f4a261';
+  if (s <= 50) return '#2a9d8f';
+  if (s <= 65) return '#f4a261';
   if (s <= 75) return '#e63946';
   return '#9d0208';
 }
 
 function badgeHtml(s) {
-  if (s <= 45) return '<div class="badge badge-low">🟢 Nizka izpostavljenost</div>';
-  if (s <= 60) return '<div class="badge badge-med">🟡 Srednja izpostavljenost</div>';
+  if (s <= 50) return '<div class="badge badge-low">🟢 Nizka izpostavljenost</div>';
+  if (s <= 65) return '<div class="badge badge-med">🟡 Srednja izpostavljenost</div>';
   if (s <= 75) return '<div class="badge badge-high">🔴 Visoka izpostavljenost</div>';
   return '<div class="badge badge-vhigh">⚫ Zelo visoka izpostavljenost</div>';
 }
 
 function materialsHtml(s) {
-  if (s <= 45) return `
+  if (s <= 50) return `
     <div class="material-chip"><div class="mat-badge mat-badge-primary">PRIPOROČENO</div><div class="mat-info"><strong>Zastavolin 125 g/m²</strong> – ekonomična rešitev, sublimacijski tisk z UV zaščito</div></div>
     <div class="material-chip"><div class="mat-badge mat-badge-alt">ALTERNATIVA</div><div class="mat-info">Luknjičast poliester 120 g/m²</div></div>`;
-  if (s <= 60) return `
+  if (s <= 65) return `
     <div class="material-chip"><div class="mat-badge mat-badge-primary">PRIPOROČENO</div><div class="mat-info"><strong>Luknjičast poliester 120 g/m²</strong> – zmanjša obremenitev vetra, hitro odvaja vlago</div></div>
     <div class="material-chip"><div class="mat-badge mat-badge-alt">ALTERNATIVA</div><div class="mat-info">Dralon 165 g/m² – za povečano obstojnost</div></div>`;
   return `
