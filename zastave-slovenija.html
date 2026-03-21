@@ -488,24 +488,24 @@ function getRegionName(lat, lng) {
 }
 
 function scoreColor(s) {
-  if (s <= 30) return '#2a9d8f';
-  if (s <= 55) return '#f4a261';
+  if (s <= 45) return '#2a9d8f';
+  if (s <= 60) return '#f4a261';
   if (s <= 75) return '#e63946';
   return '#9d0208';
 }
 
 function badgeHtml(s) {
-  if (s <= 30) return '<div class="badge badge-low">🟢 Nizka izpostavljenost</div>';
-  if (s <= 55) return '<div class="badge badge-med">🟡 Srednja izpostavljenost</div>';
+  if (s <= 45) return '<div class="badge badge-low">🟢 Nizka izpostavljenost</div>';
+  if (s <= 60) return '<div class="badge badge-med">🟡 Srednja izpostavljenost</div>';
   if (s <= 75) return '<div class="badge badge-high">🔴 Visoka izpostavljenost</div>';
   return '<div class="badge badge-vhigh">⚫ Zelo visoka izpostavljenost</div>';
 }
 
 function materialsHtml(s) {
-  if (s <= 30) return `
-    <div class="material-chip"><div class="mat-badge mat-badge-primary">PRIPOROČENO</div><div class="mat-info"><strong>Zastavolin 115 g/m²</strong> – ekonomična rešitev, sublimacijski tisk z UV zaščito</div></div>
+  if (s <= 45) return `
+    <div class="material-chip"><div class="mat-badge mat-badge-primary">PRIPOROČENO</div><div class="mat-info"><strong>Zastavolin 125 g/m²</strong> – ekonomična rešitev, sublimacijski tisk z UV zaščito</div></div>
     <div class="material-chip"><div class="mat-badge mat-badge-alt">ALTERNATIVA</div><div class="mat-info">Luknjičast poliester 120 g/m²</div></div>`;
-  if (s <= 55) return `
+  if (s <= 60) return `
     <div class="material-chip"><div class="mat-badge mat-badge-primary">PRIPOROČENO</div><div class="mat-info"><strong>Luknjičast poliester 120 g/m²</strong> – zmanjša obremenitev vetra, hitro odvaja vlago</div></div>
     <div class="material-chip"><div class="mat-badge mat-badge-alt">ALTERNATIVA</div><div class="mat-info">Dralon 165 g/m² – za povečano obstojnost</div></div>`;
   return `
