@@ -459,13 +459,13 @@ function getRainScore(lat, lng) {
 
 function getSunScore(lat, lng) {
   if (lat < 45.72 && lng < 14.0) return { score: 88, label: "2200–2500 ur", desc: "Obala – največ sončnega obsevanja v SLO" };
-  if (lat > 45.72 && lat < 46.0 && lng < 14.2) return { score: 70, label: "1900–2100 ur", desc: "Primorska – nadpovprečno sonce" };
+  if (lat > 45.72 && lat < 46.0 && lng < 14.2) return { score: 70, label: "1900–2100 ur", desc: "Primorska – nadpovprečno sončno obsevanje" };
   if (lng > 16.0) return { score: 65, label: "2000–2100 ur", desc: "Prekmurje – nadpovprečno sončno obsevanje" };
-  if (lng > 15.3 && lng < 16.0) return { score: 60, label: "1950–2050 ur", desc: "Vzhodna Slovenija – zmerno sonce" };
+  if (lng > 15.3 && lng < 16.0) return { score: 60, label: "1950–2050 ur", desc: "Vzhodna Slovenija – zmerno sončno obsevanje" };
   if (lat > 46.3 && lng < 14.0) return { score: 35, label: "1500–1700 ur", desc: "Alpske doline – zmanjšano sončno obsevanje" };
-  if (lat > 46.2 && lat < 46.5 && lng > 14.0 && lng < 14.7) return { score: 45, label: "1700–1900 ur", desc: "Gorenjska – podpovprečno sonce" };
+  if (lat > 46.2 && lat < 46.5 && lng > 14.0 && lng < 14.7) return { score: 45, label: "1700–1900 ur", desc: "Gorenjska – podpovprečno sončno obsevanje" };
   if (lat > 46.0 && lng > 14.7 && lng < 15.3) return { score: 55, label: "1900–2000 ur", desc: "Štajerska – povprečno sončno obsevanje" };
-  if (lat > 45.9 && lat < 46.2 && lng > 14.3 && lng < 14.9) return { score: 50, label: "1850–1950 ur", desc: "Osrednja Slovenija – zmerno sonce" };
+  if (lat > 45.9 && lat < 46.2 && lng > 14.3 && lng < 14.9) return { score: 50, label: "1850–1950 ur", desc: "Osrednja Slovenija – zmerno sončno obsevanje" };
   return { score: 52, label: "1850–2000 ur", desc: "Povprečno sončno obsevanje" };
 }
 
