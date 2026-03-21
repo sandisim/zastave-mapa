@@ -332,6 +332,26 @@
     font-size: 0.6rem !important;
   }
   .leaflet-control-attribution a { color: #4361ee !important; }
+
+.prompt-icon svg {
+  width: 28px;
+  height: 28px;
+  animation: hintMove 1.5s infinite;
+}
+
+/* premikanje proti levi (proti mapi) */
+@keyframes hintMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* hover efekt */
+.prompt-box:hover .prompt-icon svg {
+  transform: scale(1.2);
+  color: #0073aa;
+}
+  
 </style>
 </head>
 <body>
