@@ -339,7 +339,7 @@
 <header>
   <div>
     <div class="logo">🏳 Zastave · Analiza Lokacije</div>
-    <div class="subtitle">Izpostavljenost vremenskim vplivom – kliknite kjerkoli na zemljevidu</div>
+    <div class="subtitle">Izpostavljenost zastav vremenskim vplivom – za prikaz izpostavljenosti kliknite kjerkoli na zemljevidu</div>
   </div>
   <div class="weights">
     <div class="weight-pill"><div class="dot dot-wind"></div> Veter <span>65 %</span></div>
@@ -408,7 +408,7 @@
       </div>
 
       <div class="recommendation">
-        <div class="rec-title">Priporočen material zastave</div>
+        <div class="rec-title">Priporočen material za zastave</div>
         <div id="material-list"></div>
       </div>
 
@@ -451,8 +451,8 @@ function getRainScore(lat, lng) {
   if (lat > 45.7 && lat < 46.3 && lng > 14.0 && lng < 14.5) return { score: 72, label: "1400–2000 mm", desc: "Nadpovprečne letne padavine" };
   if (lat < 45.72 && lng < 14.0) return { score: 55, label: "1000–1300 mm", desc: "Obala – zmerne padavine" };
   if (lng > 16.0) return { score: 30, label: "700–850 mm", desc: "Prekmurje – najmanj padavin v Sloveniji" };
-  if (lng > 15.3 && lng < 16.0) return { score: 40, label: "850–1000 mm", desc: "Vzhodna Slovenija – majhna količina padavin" };
-  if (lat > 46.0 && lng > 14.8 && lng < 15.3) return { score: 52, label: "1000–1200 mm", desc: "Štajerska – povprečne padavine" };
+  if (lng > 15.3 && lng < 16.0) return { score: 40, label: "850–1000 mm", desc: "Majhna količina padavin" };
+  if (lat > 46.0 && lng > 14.8 && lng < 15.3) return { score: 52, label: "1000–1200 mm", desc: "Povprečna količina padavin" };
   if (lat < 45.85 && lng > 14.6) return { score: 58, label: "1000–1300 mm", desc: "Dolenjska – zmerne padavine" };
   return { score: 60, label: "1100–1300 mm", desc: "Osrednja Slovenija – povprečne padavine" };
 }
