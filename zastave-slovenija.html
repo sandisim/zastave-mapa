@@ -507,10 +507,10 @@
 
 function getWindScore(lat, lng) {
   if (lat < 45.62 && lng < 13.75) return { score: 95, label: "> 5 m/s", desc: "Obala – ekstremna burja, kritična izpostavljenost" };
-  if (lat < 45.72 && lng < 14.0)  return { score: 90, label: "> 5 m/s", desc: "Primorska obala – redna burja" };
+  if (lat < 45.72 && lng < 14.0)  return { score: 90, label: "> 5 m/s", desc: "Primorska obala – pogosta burja" };
   if (lat > 45.6 && lat < 45.88 && lng > 13.75 && lng < 14.25) return { score: 84, label: "4–5 m/s", desc: "Kraška planota – pogosta in močna burja" };
   if (lat > 45.82 && lat < 46.05 && lng > 13.7 && lng < 14.15) return { score: 80, label: "4–5 m/s", desc: "Vipavska dolina – zelo močna burja" };
-  if (lat > 46.2 && lat < 46.55 && lng > 13.35 && lng < 13.92) return { score: 42, label: "1–2 m/s", desc: "Soška dolina – gorska zavetja, nizka hitrost vetra" };
+  if (lat > 46.2 && lat < 46.55 && lng > 13.35 && lng < 13.92) return { score: 42, label: "1–2 m/s", desc: "Alpsko območje – gorska zavetja, nizka hitrost vetra" };
   if (lat > 46.3 && lng < 14.05) return { score: 68, label: "3–4 m/s", desc: "Alpsko območje – povišane hitrosti vetra" };
   if (lat > 46.4 && lat < 46.65 && lng > 13.9 && lng < 14.7) return { score: 62, label: "3–4 m/s", desc: "Povišane hitrosti vetra" };
   if (lng > 16.1) return { score: 58, label: "2–3 m/s", desc: "Zmerna vetrovna izpostavljenost" };
@@ -523,15 +523,15 @@ function getWindScore(lat, lng) {
 }
 
 function getRainScore(lat, lng) {
-  if (lat > 46.1 && lat < 46.55 && lng > 13.35 && lng < 13.95) return { score: 98, label: "2600–3300 mm", desc: "Največ padavin v SLO – ekstremna vlažnost" };
+  if (lat > 46.1 && lat < 46.55 && lng > 13.35 && lng < 13.95) return { score: 98, label: "2600–3300 mm", desc: "Največ padavin v Sloveniji – ekstremna vlažnost" };
   if (lat > 45.8 && lat < 46.15 && lng > 13.7 && lng < 14.15) return { score: 88, label: "2000–2600 mm", desc: "Primorsko zaledje – zelo visoka količina padavin" };
   if (lat > 45.7 && lat < 46.3 && lng > 14.0 && lng < 14.5) return { score: 72, label: "1400–2000 mm", desc: "Nadpovprečne letne padavine" };
-  if (lat < 45.72 && lng < 14.0) return { score: 55, label: "1000–1300 mm", desc: "Obala – zmerne padavine" };
+  if (lat < 45.72 && lng < 14.0) return { score: 55, label: "1000–1300 mm", desc: "Zmerna količina padavin" };
   if (lng > 16.0) return { score: 30, label: "700–850 mm", desc: "Prekmurje – najmanj padavin v Sloveniji" };
   if (lng > 15.3 && lng < 16.0) return { score: 40, label: "850–1000 mm", desc: "Majhna količina padavin" };
   if (lat > 46.0 && lng > 14.8 && lng < 15.3) return { score: 52, label: "1000–1200 mm", desc: "Povprečna količina padavin" };
-  if (lat < 45.85 && lng > 14.6) return { score: 58, label: "1000–1300 mm", desc: "Dolenjska – zmerne padavine" };
-  return { score: 60, label: "1100–1300 mm", desc: "Osrednja Slovenija – povprečne padavine" };
+  if (lat < 45.85 && lng > 14.6) return { score: 58, label: "1000–1300 mm", desc: "Zmerna količina padavin" };
+  return { score: 60, label: "1100–1300 mm", desc: "Zmerna količina padavin" };
 }
 
 function getSunScore(lat, lng) {
